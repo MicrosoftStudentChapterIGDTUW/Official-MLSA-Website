@@ -1,0 +1,117 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+main {
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-top: 28vh solid #5064ff;
+	border-right: 40vw solid transparent;
+  opacity: 0.90;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+.triangle-2 {
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-top: 25vh solid #cecdfe;
+	border-right: 75vw solid transparent;
+  opacity: 0.90;
+  z-index: -2;
+  transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+.triangle-3 {
+  position: absolute;
+  display: block;
+  right: 0;
+  width: 0;
+	height: 0;
+	border-top: 25vh solid #002eb9;
+	border-left: 75vw solid transparent;
+  opacity: 0.90;
+  z-index: -3;
+  transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+.container {
+  position: relative;
+  top: 20vh;
+  padding: 50px 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 100;
+}
+  
+
+@media only screen and (min-width: 768px) {
+  
+  .triangle {
+	border-top: 28vh solid #004ed6;
+  border-top: 120vh solid #5064ff;
+    border-right: 35vw solid transparent;
+  }
+  .triangle-2 {
+    border-top: 120vh solid #cecdfe;
+    border-right: 40vw solid transparent;
+  }
+  .triangle-3 {
+    display: none;
+    
+  }
+  .container {
+    top: 10vh;
+  }
+}
+
+article {
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 100;
+}
+article h1 {
+  font-family: 'Merriweather';
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #202020;
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+article .metadata {
+  margin-bottom: 1em;
+}
+article span {
+  font-family: Merriweather;
+  font-size: 1em;
+  font-weight: 400;
+  display: block;
+  color: #828385;
+  text-align: center;
+  margin-bottom: 0.250em
+}
+article p {
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 1.150em;
+  line-height: 1.4;
+  color: #363636;
+  margin-bottom: 1.1635em;
+  letter-spacing: -0.0040em;
+  padding: 0.50em;
+}
+
+@media only screen and (min-width: 768px) {
+  article p {
+    font-size: 1.30em;
+  }
+}

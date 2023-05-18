@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLSA</title>
+    <style>
+     .about{
+      display:flex;
+
+     }
+      .left{
+         display:inline-block;
+         border:1px solid white;
+         border-radius:30px;
+         width:120%;
+         height:50%;
+         margin-left:8rem;
+         margin-top:10rem;
+         background-color: white;
+         box-shadow: inset;
+         padding:2rem;
+         z-index:2;         
+         font-size: 1.5rem;
+         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+   
+      }
+      .left h1{
+         font-size:2.5rem;
+         color:black;
+
+      }
+      
+      .right{
+         display:inline-block;
+         margin-left:-7rem;
+      
+
+
+      }
+      .right img{
+         display:inline-block;
+         width:80%;
+         border-radius:30px;
+         box-shadow: 4px 4px 8px 4px rgb(0 0 0 / 20%);
+
+      }
+      .about_head{
+         text-align: center;
+         margin-top:3rem;
+         font-size:3rem;
+
+      }
+      @media(max-width:1024px)
+      {
+         .about{
+      display:flex;
+
+     }
+     
+      .left{
+         display:block;
+         border:1px solid white;
+         border-radius:30px;
+         width:auto;
+         height:auto;
+         margin-left:0rem;
+         margin-top:12.5rem;
+         background-color: white;
+         box-shadow: inset;
+         padding:2rem;
+         z-index:2;
+         font-size:1rem;
+
+   
+      }
+      .left h1{
+         font-size:1.5rem;
+         color:black;
+
+      }
+    
+      .right{
+         display:inline-block;
+         margin-left:-20rem;
+       
+         margin-right:3rem;;
+
+
+      }
+      .right img{
+         display:inline-block;
+         width:100%;
+         border-radius:30px;
+
+      }
+      .about_head{
+         text-align: center;
+         margin-top:1.5rem;
+         font-size:3rem;
+         margin-bottom: 1.5rem;
+
+      }
+      }
+   </style>
+      
+</head>
+<body>
+
+
+<div class="container_about">
+   <h1 class="about_head">About Us</h1>
+   <div class="about">
+      <div class="left" data-aos="fade-right">
+         <h1>We are here, to be the perfect guidance you need to ace the engineering journey you are on!</h1>
+         
+         <p>We are the MICROSOFT LEARN STUDENT AMBASSADOR STUDENT CHAPTER, your one stop spot for all the amazing sessions and events. This is where you can grow by learning from the mistakes, experiences, success and failure of the experts, your seniors, and peers. We will guide and make you ready for whatever comes along.
+            Get ready for all the exciting and amazing stuff we have in store for you all! </p>
+
+
+      </div>
+      <div class="right">
+         <img src="./assets/about.jpg">
+      </div>
+     
+      <div class="clear"></div>
+   </div>
+   </div>
+   
+   <script>
+      AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+     
+</body>
+</html>
