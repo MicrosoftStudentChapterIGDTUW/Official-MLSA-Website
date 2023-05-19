@@ -42,7 +42,7 @@ h1{
 
 body {
   font-family: var(--body-font);
-  background: radial-gradient(circle,white,#2673AE);  
+  background: radial-gradient(circle,rgb(221, 217, 217),#b3deff);  
   margin-bottom: 20px;
 }
 
@@ -77,11 +77,11 @@ img {
   position: relative;
   width: 256px;
   background-color: var(--black-color);
-  padding: 1.25rem 2rem 3rem;
+  padding: 1rem 0rem 3rem 0rem;
   border-radius: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
-  margin: 1.5rem;/*relative size to my screen size*/
+  margin: 3.5rem;/*relative size to my screen size*/
 }
 
 .card__img {
