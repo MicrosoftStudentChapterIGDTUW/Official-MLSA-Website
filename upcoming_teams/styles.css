@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Courgette&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,600&family=Patrick+Hand&family=Source+Sans+Pro:wght@600&display=swap');
 
 /*@media (max-width: 767px) {
     .container {
@@ -26,12 +27,20 @@
 }
 /*title*/
 h1{
-    font-family: var(--body-font);
+  font-family: 'Bebas Neue', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Source Sans Pro', sans-serif;
     font-size: 60px;
     text-align: center;
     color: var(--first-color);
     font-weight: 500;
     text-shadow: 0px 3px black;
+    position: relative;
+    top:4.5rem;
 }
 /*=============== BASE ===============*/
 * {
@@ -44,6 +53,9 @@ body {
   font-family: var(--body-font);
   background: radial-gradient(circle,rgb(221, 217, 217),#b3deff);  
   margin-bottom: 20px;
+}
+.navlogo{
+  height:1rem;
 }
 
 a {
@@ -70,6 +82,8 @@ img {
     margin-inline: 1.5rem; */
     justify-content: center;
     place-items: center;
+    position: relative;
+    top:3.5rem;
   }
   
 .card {
@@ -236,5 +250,234 @@ img {
     color: var(--first-color);
     font-weight: 500;
     text-shadow: 0px 3px black;
+}
+.card {
+  flex-basis: calc(25% - 20px);
+  position: relative;
+  width: 256px;
+  background-color: var(--black-color);
+  padding: 1rem 5rem 3rem 5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+  margin: 1.5rem;/*relative size to my screen size*/
+}
+.container {
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+  /* gap: 50px; */
+  flex-wrap: wrap;
+  /* margin-inline: 1.5rem;
+  margin-inline: 1.5rem; */
+  justify-content: center;
+  place-items: center;
+  position: relative;
+  top:6rem;
+}
+}
+/* Navbar */
+/*  sidenav css*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  right: 0;
+  background-color: #305891;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 70px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  font-size:30px;
+  text-decoration: underline;
+  color:white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+}
+.sidenav .closebtn:hover{
+  color:red ;
+}
+
+
+.navButtonbg{
+ /* height:35px;
+  width:35px;*/
+/*  align-self: flex-end;*/
+}
+
+.navButton{
+  font-size:30px;
+  font-weight: 600;
+  cursor:pointer;
+  z-index:998;
+  position: fixed;
+  top:4vh;
+  transform: translate(-50%,-50%);
+  right:5%;
+  display: none;
+}
+.navbody{
+  background-color: #ffffff;
+  width:100vw;
+  height:8vh;
+/*  justify-content: center;*/
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 1px solid lightgrey;
+/*  flex-wrap: wrap;*/
+  
+}
+.navlogo{
+  height:4rem;
+  width: 4rem;
+  top:4vh;
+  transform: translate(-50%,-50%);
+  margin-left: 40px;
+  position: fixed;
+  z-index: 10;
+}
+.logo_name{
+/*  right: 60px;*/
+/*margin-left: 100px;*/
+/*right: 2px;*/
+/*z-index: 998;*/
+}
+
+.navname1{
+  position: fixed;
+  right:7% ;
+  top:4vh;
+  transform: translate(0%,-50%);
+  margin-right:30px;
+  font-weight: 600;
+  font-size: large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+.navname2{
+  visibility: hidden;
+  position: fixed;
+  right:10% ;
+  top:4vh;
+  transform: translate(0%,-50%);
+  margin-right:30px;
+  font-weight: 700;
+  font-size:medium;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
+}
+
+.navitems{
+  display: flex;
+  align-items: left;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+.fullnavitem:hover{
+  color:#001d42;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.fullnavul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  width: 100vw;
+  height: 8vh;
+  /* margin-right: 150px; */
+  padding-right: 70px;
+  display: flex;
+  justify-content: flex-end;
+  /* position:fixed; */
+  /* flex-direction: row-reverse; */
+}
+
+/* .fullnavul li:first-child {
+  border-right:1px solid #bbb;
+  height: 8vh;
+} */
+
+.fullnavul li:last-child {
+  border-right: none;
+}
+
+.fullnavul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
+}
+
+.fullnavul li a:hover:not(.active) {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px){
+  .navname1{
+
+visibility: hidden;
+  }
+  .fullnav{
+    visibility: hidden;
+  }
+  .navButton{
+    display: inline;
+  }
+  .navname2{
+    visibility: visible;
+/*    margin-right: 10px;*/
+  }
+
+.navbody{
+  height:7vh;
+}
+.navlogo{
+  width:3rem;
+  height:3rem;
 }
 }

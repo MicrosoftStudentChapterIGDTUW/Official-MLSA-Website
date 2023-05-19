@@ -4,13 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <link href="../preloader.css" rel="stylesheet"> -->
     <title>Upcoming Team 2023</title>
 </head>
 
 <body>
-<h1 class="animate-heading">Team 2023</h1>
+  <!--Navbar-->
+  <div id="mySidenav" class="sidenav">
+    <div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <div class="navitems">
+
+      <a href="../index.html#includedContent">Home</a>
+      <a href="../faq/faq.html">FAQ</a>
+
+    </div>
+
+
+  </div>
+  <div class="navbody">
+    <div >
+      <img class="navlogo" src="../assets/MLSA_logo-transformed.png">
+    </div>
+    <div class="logo_name">
+      <!-- <span id="navname " class="navname1">MLSA-Indira Gandhi Delhi Technical University for Women</span> -->
+      <div class="fullnav">
+   
+     
+        <ul class="fullnavul"> 
+         <!-- <li><a class="fullnavitem" style="padding-right: 50px ; font-weight: 600;" href="#">MLSA IGDTUW</a></li>                                          -->
+         <li><a class="fullnavitem"  href="../index.html#includedContent">Home</a></li>
+        
+         <li><a class="fullnavitem" href="./faq/faq.html">FAQ</a></li>.
+        </ul>
+         </div>
+      <span id="navname" class="navname2" > MLSA-IGDTUW</span>
+
+    <!--  <script type="text/javascript">
+          if (window.innerWidth < 500 px) {
+              document.getElementById("navname").innerHTML="MLSA IGDTUW";
+          }
+      </script> -->
+    </div>
+    <!-- <div class="navButtonbg"> -->
+      <span  id="navButton"class="navButton"  onclick="openNav()">&#9776;</span>
+    <!-- </div> -->
+  </div>
+
+<!--Home-->
+
+
+  
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById('navButton').style.visibility="hidden";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.1)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById('navButton').style.visibility="visible";
+  document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+</script>
+      <!--body-->
+<h1 class="animate-heading"> Core Team 2023</h1>
   <div class="container" id="container">
     <!--Card-one-->
     <div class="card">
