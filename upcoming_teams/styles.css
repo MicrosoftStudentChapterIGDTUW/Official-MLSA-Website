@@ -492,6 +492,7 @@ footer {
   font-size: 13px;
   line-height: 25px;
   margin-top: 4rem;
+  margin-bottom:-1.2rem;
   
 }
 
@@ -517,7 +518,7 @@ footer {
 
 .logo {
   width: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .col h3 {
