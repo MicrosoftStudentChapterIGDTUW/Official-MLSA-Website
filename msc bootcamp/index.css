@@ -69,6 +69,113 @@ a:visited{
     color: white;
     box-shadow: 0px 0px 2px #2f67f8;
 }
+
+#container {
+    width: auto;
+    height: auto;
+    margin-top: 120px;
+    -webkit-perspective: 800px;
+            perspective: 800px;
+    text-align: center;
+}
+#container h1 {
+    color: rgb(3, 3, 11);
+    margin-bottom: 30px;
+}
+#container > hr {
+    border: none;
+    border: 1px solid #fff;
+    width: 80%;
+}
+.card {
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    width: 350px/*220px*/;
+    height: 390px/*260px*/;
+    opacity: 0.85;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border-radius: 5px;
+}
+
+.front {
+    transform: rotateY(0deg);
+    background: -webkit-linear-gradient(top left, #639add, #497cb6);
+    background: linear-gradient(to bottom right, #639add, #07264a );
+    text-align: center;
+    padding: 30px;
+}
+.back {
+    background: -webkit-linear-gradient(top left, #98c6e7, #4495cb);
+    background: linear-gradient(to bottom right, #5d97cd, #1c6dc4);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    padding: 40px 15px;
+    color: #fff;
+}
+.text{
+    font-size: 20px;
+}
+.card:hover .front {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+}
+.card:hover .back {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+}
+/*styling*/
+.front .contact {
+    height: 200px;
+    width: 200px;
+    border: 5px solid #8fb5de;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.front .name {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+}
+.front .job {
+    color: #fff;
+}
+.front hr {
+    border: none;
+    color: #8fb5de;
+    border: 1px solid;
+}
+.back .icon {
+    fill: currentColor;
+    color: inherit;
+    height: 33px;
+    width: 33px;
+    margin-top: 15px;
+    color: white;
+}
+.back .icon:hover {
+    cursor: pointer;
+    color: #648767;
+}
+.simul{
+  display: flex;
+}
 @media screen and (max-width:950px){
 
 }
