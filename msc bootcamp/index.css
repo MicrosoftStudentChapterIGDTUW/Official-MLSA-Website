@@ -5,10 +5,13 @@
 }
 
 body{
-    background-color: white;
     height:fit-content;
 }
-
+.navlogoboot{
+    width:3.5rem;
+    height:3.5rem;
+    margin-left: 1rem;
+}
 .banner img{
     width:100%;
     height:400px;
@@ -16,6 +19,7 @@ body{
     padding-right: 150px;
     padding-top:50px;
     padding-right:100px;
+    margin-top: 1rem;
 }
 
 .main_body{
@@ -200,10 +204,10 @@ a:visited{
 
     .banner img{
         width:100%;
-        height:300px;
-        padding:50px;
+        height:200px;
+        padding:00px;
         padding-bottom: 0px;
-        
+        margin-top: 4rem;
     }
 
     .registration{
@@ -213,8 +217,12 @@ a:visited{
     }
 
     .cont{
-        padding:50px;
+        padding:5px;
         padding-bottom: 0px;
+        margin-top: 2rem;
     
     } 
+    .cont p{
+        font-size: 1.1rem;
+    }
 }
