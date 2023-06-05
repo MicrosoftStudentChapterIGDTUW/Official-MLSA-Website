@@ -225,4 +225,7 @@ a:visited{
     .cont p{
         font-size: 1rem;
     }
+    .back p{
+        font-size: 15px;
+    }
 }
