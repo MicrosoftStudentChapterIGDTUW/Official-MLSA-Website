@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+        
+    <!-- sidenav content -->
+    
+<div id="mySidenav" class="sidenav">
+<div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+<div class="navitems">
+  <a href="home.html">Home</a>
+  <a href="home.html#includeAbout">About Us</a>
+  <a href="home.html#includeGoal">Goals</a>
+  <a href="home.html#includeEvent">Events</a>
+  <a href="home.html#includeTeam">Team</a>
+  <a href="./faq.html">FAQ</a>
+
+</div>
+
+
+</div>
+<div class="navbody">
+  <div >
+    <img class="navlogo" src="img/MLSA_logo-transformed.png">
+  </div>
+  <div class="logo_name">
+    <div class="fullnav">
+   
+     
+ <ul class="fullnavul"> 
+  <!-- <li><a class="fullnavitem" style="padding-right: 50px ; font-weight: 600;" href="#">MLSA IGDTUW</a></li>                                          -->
+  <li><a class="fullnavitem"  href="#">Home</a></li>
+  <li><a class="fullnavitem" href="home.html#includeAbout">About Us</a></li>
+  <li><a class="fullnavitem" href="home.html#includeGoal">Goals</a></li>
+  <li><a class="fullnavitem" href="home.html#includeEvent">Events</a></li>
+  <li><a class="fullnavitem" href="home.html#includeTeam">Team</a></li>
+  <li><a class="fullnavitem" href="./faq.html">FAQ</a></li>
+ </ul>
+  </div>
+    <span id="navname" class="navname2" > MLSA-IGDTUW</span>
+
+   <!--  <script type="text/javascript">
+        if (window.innerWidth < 500 px) {
+            document.getElementById("navname").innerHTML="MLSA IGDTUW";
+        }
+    </script> -->
+  </div>
+<div class="navButtonbg">
+<span  id="navButton"class="navButton"  onclick="openNav()">&#9776;</span>
+</div>
+</div>
+<!--Home-->
+
+
+
+  
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById('navButton').style.visibility="hidden";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.1)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById('navButton').style.visibility="visible";
+  document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+</script>
+   
+
+
+    <!-- sidenav content end -->
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Send us the message and contact now. Get your all queries resolved here!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>IGDTUW, Delhi-110006</p>
+            </div>
+            <!---<div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>microsoftstudentchapter.igdtuw@gmail.com</p>
+            </div>-->
+            
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-media-icons">
+              
+              <a href="https://twitter.com/IgdtuwMsc">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/msc.igdtuw/">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/microsoft-student-chapter-igdtuw/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+      
+          <form action="https://formsubmit.co/aastha.tanya21@gmail.com" method="POST" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" id="username" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" id="email" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" id="phone" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" id="message"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" name="submit" value="Send" class="btn" onclick="sendMail()" />
+          </form>
+        </div>
+      </div>
+      </div>
+
+
+      <footer>
+        <div class="row">
+          <div class="col">
+            <img src="https://miro.medium.com/max/1200/1*fMCdGCokXoh8CECCD7j9Og.png" class="logo" style="width:100px; height:90px; ">
+            
+          </div>
+          <div class="col">
+            <h3 style="color:white">Address 
+            </h3>
+            <p>IGDTUW</p>
+            <p>Delhi-110006</p>
+           
+          </div>
+      
+          <div class="col">
+            <h3 style="color:white">Links
+            </h3>
+            <a href="event.html"><p>Events</p></a>
+            <a href="team.html"><p>Our Team</p>
+            <a href="faq.html"><p>FAQ</p></a>
+            <p>Contact Us</p>
+            <a href="#"><p>About</p></a>
+      
+      
+          </div>
+      
+          
+          <div class="col">
+
+            <div class="social-icons">
+              
+             <a href="https://twitter.com/IgdtuwMsc"> <i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/msc.igdtuw/"><i class="fab fa-instagram"></i></a>
+             <a href="https://www.linkedin.com/company/microsoft-student-chapter-igdtuw/"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">MLSA-IGDTUW © 2022 - All Rights Reserved</p>
+      
+      </footer>
+  
+      <script src="app.js"></script>
+  </body>
+</html>
