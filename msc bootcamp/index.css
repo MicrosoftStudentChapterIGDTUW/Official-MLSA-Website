@@ -162,7 +162,7 @@ a:visited{
     background: -webkit-linear-gradient(top left, #639add, #497cb6);
     background: linear-gradient(to bottom right, #639add, #07264a );
     text-align: center;
-    padding: 30px;
+    padding: 15% 30px 30px 30px;
 }
 .back {
     background: -webkit-linear-gradient(top left, #98c6e7, #4495cb);
@@ -172,9 +172,9 @@ a:visited{
     padding: 40px 15px;
     color: #fff;
 }
-.text{
+/* .text{
     font-size: 20px;
-}
+} */
 .card:hover .front {
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
@@ -256,7 +256,7 @@ a:visited{
     }
 
     .cont{
-        padding:5px;
+        padding:5%;
         padding-bottom: 0px;
         margin-top: 2rem;
         width:100%;
@@ -266,6 +266,27 @@ a:visited{
         font-size: 1rem;
     }
     .back p{
-        font-size: 15px;
+        font-size: 1rem;
+    }
+
+    .card{
+        height: 23em;
+        width: 20em;
+    }
+
+    .name{
+        padding-bottom: 5%;
+        size: 5em;
+    }
+
+    img .contact{
+        padding-top: -10%;
+        size: 15rem;
+    }
+
+    .text{
+        height: 15rem;
     }
 }
+
+
