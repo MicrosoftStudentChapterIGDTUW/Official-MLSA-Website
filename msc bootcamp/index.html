@@ -6,38 +6,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <title>Document</title>
+    <link href="../preloader.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+
+
 </head>
-<body>
+<body   style=" background-image: linear-gradient(white,#d5e9ff);" >
+      <!-- sidenav content -->
+    
+  <div id="mySidenav" class="sidenav">
+    <div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <div class="navitems">
+
+      <a href="../index.html#includedContent">Home</a>
+      <a href="../upcoming_teams/upcoming_teams.html">Team</a>
+    </div>
+
+
+  </div>
+  <div class="navbody">
+    <div >
+      <img class="navlogoboot" style="padding: 10%;" src="../assets/MLSA_logo-transformed.png">
+    </div>
+    <div class="logo_name">
+      <!-- <span id="navname " class="navname1">MLSA-Indira Gandhi Delhi Technical University for Women</span> -->
+      <div class="fullnav">
+   
+     
+        <ul class="fullnavul"> 
+         <!-- <li><a class="fullnavitem" style="padding-right: 50px ; font-weight: 600;" href="#">MLSA IGDTUW</a></li>                                          -->
+         <li><a class="fullnavitem"  href="../index.html#includedContent">Home</a></li>
+        
+         <li><a class="fullnavitem" href="../upcoming_teams/upcoming_teams.html">Team</a></li>.
+        </ul>
+         </div>
+      <span id="navname" class="navname2"> MLSA-IGDTUW</span>
+
+    <!--  <script type="text/javascript">
+          if (window.innerWidth < 500 px) {
+              document.getElementById("navname").innerHTML="MLSA IGDTUW";
+          }
+      </script> -->
+    </div>
+    <!-- <div class="navButtonbg"> -->
+      <span  id="navButton" class="navButton"  onclick="openNav()">&#9776;</span>
+    <!-- </div> -->
+  </div>
+
+<!--Home-->
+
+
+  
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById('navButton').style.visibility="hidden";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.1)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById('navButton').style.visibility="visible";
+  document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+</script>
+    <!-- sidenav content end -->
     <div class="banner">
         <img src="./img/bootcamp banner.jpg" alt="">
     </div>
-    <div class="main_body">
+
+  
         <div class="cont">
-            <p>MSC, IGDTUW is elated to inform that the club shall be organizing a summer bootcamp from 5th-30th June.It shall consist of mentor mentee circles that shall emphasize on various fields such as AI/ML, AR/VR, WebD, AppDev.<br>
-                The mentors shall focus on project-based learning:teams/mentors will choose one project each and will complete it along with learning that skill in the duration of the course either individually or in teams.<br>
+            <p>MSC, IGDTUW is elated to inform that the club shall be organizing a summer bootcamp from 5th-30th June. It shall consist of mentor - mentee circles that shall emphasize on various fields such as AI/ML, AR/VR, WebD, AppDev.<br>
+                The mentors shall focus on project-based learning: teams/mentors will choose one project each and will complete it along with learning that skill in the duration of the course either individually or in teams.<br>
                 The bootcamp shall be certificate-based for both mentors and mentees.This incredible opportunity shall ensure that the participants make the most of their summer vacations by picking up new skills and completing projects that shall add to their resumes.<br>
                 It shall also help impart important coding practices that will ensure that students are exposed to the latest advancements in technology.
                 </p>
         </div>
-        <div class="registration">
+        <div class="registration col-lg-6 col-md-12">
             
             <!-- <h1>
                 registration
             </h1> -->
-            <button>
+            <button class="button" style="margin-left: -30%">
                 <a href=""> Register here</a>
             </button>
         
         </div>
-    </div> 
 
         <div id='container'>
           <h1> Web Development Mentors</h1>
              <hr>
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\kartik.jpg' class='contact'>
               <br>
               <br>
@@ -99,8 +164,8 @@
               </div>
             </div>
           </div>-->
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\rajat.jpeg' class='contact' />
               <br>
               <br>
@@ -156,8 +221,8 @@
         <div id='container'>
           <h1> ML/AI Mentors</h1>
              <hr>
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\aarushi.jpeg' class='contact' />
               <br>
               <br>
@@ -171,8 +236,6 @@
               <br>
               <br>
               <p class="text">She is a product intern at Adobe. She is also an AI/ML mentor at GDSC and Lean In. She has guided more than 100 students to start their journey in ML/AI. She is also a research intern at IGDTUW and have published four research papers in esteemed conferences. She is also a Management Head at TNP.</p>
-              <p class="text">GSoC Contributor</p>
-               <p class="text">Current GSoC Mentor and forever Open source geek.</p>
               <br>
               <br>
               <br>
@@ -219,8 +282,8 @@
               </div>
             </div>
           </div>-->
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\deepakshi.jpg' class='contact' style="object-fit:cover;"/>
               <br>
               <br>
@@ -245,8 +308,8 @@
               </div>-->
             </div>
           </div>
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\himanshu.jpeg' class='contact' />
               <br>
               <br>
@@ -276,8 +339,8 @@
         <div id='container'>
           <h1>AR/VR Mentors</h1>
              <hr>
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\saumya.jpg' class='contact' />
               <br>
               <br>
@@ -337,8 +400,8 @@
               </div>
             </div>
           </div>-->
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\siddhartha.jpg' class='contact' />
               <br>
               <br>
@@ -389,8 +452,8 @@
         <div id='container'>
           <h1>App Development Mentor</h1>
              <hr>
-          <div class='card'>
-            <div class='front'>
+          <div class='card' style="height: 28rem;">
+            <div class='front' style="padding-top: 23%;">
               <img src='..\msc bootcamp\img\abhishek.jpg' class='contact' />
               <br>
               <br>
@@ -505,14 +568,15 @@
 
         <div id='container'>
           <h1>CyberSecurity Mentor</h1>
-          <div class='card'>
-            <div class='front'>
+          <hr>
+          <div class='card' style="height: 28rem ">
+            <div class='front' style="padding-top: 23%;">
+            <!-- <div class='front'> -->
               <img src='..\msc bootcamp\img\manan.jpeg' class='contact' />
               <br>
               <br>
               <br>
               <span class='name'><b>MANAN JAIN</b></span>
-              
               <!--<span class='job'> - front-end web developer - </span>-->
             </div>
             <div class='back'>
@@ -537,6 +601,13 @@
               </div>-->
             </div>
           </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
           <!--<div class='card'>
             <div class='front'>
               <img src='https://s-media-cache-ak0.pinimg.com/736x/ba/45/26/ba4526d03ed12a940bec564cfd9de58f.jpg' class='contact' />
@@ -616,8 +687,83 @@
             </div>
           </div>-->
         </div>
+        <!-- <footer>
+          <div class="col-lg-3 col-sm-1">
+
+          </div>
+        </footer> -->
+
+        <footer>
+          <div class="row">
+            <div class="col">
+              <img src="https://miro.medium.com/max/1200/1*fMCdGCokXoh8CECCD7j9Og.png" class="logo">
+              
+            </div>
+            <div class="col">
+              <h3 style="color:white">Address 
+              </h3>
+              <p>IGDTUW</p>
+              <p>Delhi-110006</p>
+              <p>India</p>
+        
+           
+        
+        
+        
+           
+        
+        
+            </div>
+        
+            <div class="col">
+              <h3 style="color:white">Links
+              </h3>
+                <a href="index.html#includedContent"><p>Home</p></a>
+              <a href="./faq/faq.html"><p>FAQ</p></a>
+      
+        
+            </div>
+        
+            
+            <div class="col">
+      <!--       
+              <h3 style="color:white"> Our Newsletter 
+        
+        
+              </h3>
+              <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" Placeholder="Enter your email address" required="">
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+              </form> -->
+              <div class="social-icons">
+               <a href="https://twitter.com/IgdtuwMsc"> <div class=" foot_icon fa fa-twitter fa-2x"></div></a>
+               <!-- <a href="https://www.instagram.com/msc.igdtuw/"><i class="fab fa-instagram" style="background-color:blue;"></i></a> -->
+               <a href="https://www.instagram.com/msc.igdtuw/"><div class=" foot_icon fa fa-instagram fa-2x"></div></a>
+               <a href="https://www.linkedin.com/company/microsoft-student-chapter-igdtuw/"><div class=" foot_icon fa fa-linkedin fa-2x"></div></a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p class="copyright">MLSA-IGDTUW © 2022 - All Rights Reserved</p>
+        </footer>
+      
+      
+        <!--=============== MAIN JS ===============-->
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="main.js"></script>
+
+        <!--       
+                <h3 style="color:white"> Our Newsletter 
+          
+          
+                </h3>
+                <form>
+                  <i class="far fa-envelope"></i>
+                  <input type="email" Placeholder="Enter your email address" required="">
+                  <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form> -->
+          <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+          <script src="main.js"></script> -->
 </body>
-<footer>
-  
-</footer>
 </html>

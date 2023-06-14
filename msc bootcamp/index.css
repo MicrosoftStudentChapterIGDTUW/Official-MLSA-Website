@@ -5,17 +5,33 @@
 }
 
 body{
-    background-color: white;
     height:fit-content;
+}
+.navlogoboot{
+    width:3.5rem;
+    height:3.5%;
+    margin: 0 1%;
+}
+
+.navbody{
+    padding: 2.5% 0.5%;
 }
 
 .banner img{
     width:100%;
-    height:400px;
-    padding-left:150px;
-    padding-right: 150px;
-    padding-top:50px;
-    padding-right:100px;
+    height:450px;
+    /* padding-left:150px;
+    padding-right: 150px; */
+    /* padding-top:50px;
+    padding-right:100px; */
+    padding: 5% 7%;
+    margin-top: 0rem;
+}
+
+.banner{
+    width: 90%;
+    height: 95%;
+    margin: auto;
 }
 
 .main_body{
@@ -24,10 +40,18 @@ body{
   
 }
 
-.cont{
-    padding:50px;
-    width:100%;
+.logo{
+    width:8.5rem; 
+    height:8rem;
+    padding-top: 7%;
 }
+
+.cont{
+    padding: 0% 4% 4%;
+    width:100%;
+    color: black;
+}
+
 .cont p{
     font-size: 1.2rem;
     font-weight:500;
@@ -36,17 +60,37 @@ body{
     border-radius: 10px;
 }
 
+
 .registration{
-    padding:50px;
+    padding:1%;
+    text-align: center;
     width:50%;
+    /* margin-left: 18%; */
     margin:auto;
     padding-left:150px;
+}
+
+button{
+    /* text-align: right; */
+    margin: -10%;
+}
+
+.button:hover{
+    background-color: rgb(42, 42, 186);
 }
 
 /* .register{
     padding-left:200px;
 } */
 
+#navname{
+    margin: -1% 7% 3%;
+}
+
+#navbutton{
+    margin: -1% 7% 5%;
+    padding-bottom: 7%;
+}
 
 a{
     text-decoration: none;
@@ -195,15 +239,14 @@ a:visited{
         display: flex;
         flex-direction: column;
         width:100%;
-      
     }
 
     .banner img{
         width:100%;
-        height:300px;
-        padding:50px;
+        height:200px;
+        padding:00px;
         padding-bottom: 0px;
-        
+        margin-top: 4rem;
     }
 
     .registration{
@@ -213,8 +256,16 @@ a:visited{
     }
 
     .cont{
-        padding:50px;
+        padding:5px;
         padding-bottom: 0px;
+        margin-top: 2rem;
+        width:100%;
     
     } 
+    .cont p{
+        font-size: 1rem;
+    }
+    .back p{
+        font-size: 15px;
+    }
 }
