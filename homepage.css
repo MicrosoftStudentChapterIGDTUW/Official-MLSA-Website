@@ -433,6 +433,7 @@ width: 0%;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
+  color:white;
 }
 
 .footer .footer-link a {
@@ -446,8 +447,8 @@ width: 0%;
 
 .footer .footer-link a::before {
   position: relative;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* content: "\f105";
+  font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
   margin-right: 10px;
 }
@@ -530,6 +531,9 @@ width: 0%;
   font-weight: 500;
   letter-spacing: 1px;
 }
+.footer .copyright p{
+  font-size: 1.5rem;
+}
 
 .footer .copyright p a:hover {
   color: #ffffff;
@@ -554,7 +558,7 @@ width: 0%;
     text-align: center;
   }
   .cold{
-    margin-left: 2rem;
+    margin-left: 2.5rem;
   }
   .footer{
     margin-top: 8rem;

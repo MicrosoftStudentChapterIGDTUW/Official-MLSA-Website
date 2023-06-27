@@ -85,6 +85,7 @@ body{
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
+  color:white;
 }
 
 .footer .footer-link a {
@@ -98,8 +99,8 @@ body{
 
 .footer .footer-link a::before {
   position: relative;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* content: "\f105";
+  font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
   margin-right: 10px;
 }
@@ -206,7 +207,7 @@ body{
     text-align: center;
   }
   .cold{
-    margin-left: 2rem;
+    margin-left: 2.5rem;
   }
   .footer{
     margin-top: 8rem;

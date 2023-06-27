@@ -744,8 +744,8 @@ hr {
 
 .footer .footer-link a::before {
   position: relative;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* content: "\f105";
+  font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
   margin-right: 10px;
 }
@@ -851,7 +851,7 @@ hr {
     text-align: center;
   }
   .col{
-    margin-left: 1rem;
+    margin-left:1.35rem;
   }
   .footer{
     margin-top: 8rem;

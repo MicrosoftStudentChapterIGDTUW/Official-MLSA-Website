@@ -658,8 +658,8 @@ visibility: hidden;
 
 .footer .footer-link a::before {
   position: relative;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* content: "\f105";
+  font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
   margin-right: 10px;
 }
@@ -766,7 +766,7 @@ visibility: hidden;
     text-align: center;
   }
   .cold{
-    margin-left: 2rem;
+    margin-left:0.35rem;
   }
   .footer{
     margin-top: 8rem;
