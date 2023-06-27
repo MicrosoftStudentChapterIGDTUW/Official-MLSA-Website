@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./calender.css">
+  </head>
+
+  <body>
+    <div class="arlo">
+        <div class="arlo-filters-container">
+          <div id="filters"></div>
+          <div id="arlo-filter-toggle">
+            <div class="arlo-filter-toggle-show">
+              Show filters <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="arlo-filter-toggle-hide hidden">
+              Hide filters <i class="fa fa-chevron-up"></i>
+            </div>
+          </div>
+        </div>
+      
+        <div id="upcoming-events"></div>
+      
+        <!-- Loading Placeholder -->
+        <div class="arlo-loading-placeholder">
+          <div class="arlo-placeholder-filter"></div>
+          <div class="arlo-placeholder-events" id="eventlist-event-placeholder-target">
+            <div class="arlo-placeholder-event">
+              <div class="arlo-placeholder-date"></div>
+              <div class="arlo-placeholder-title"></div>
+              <div class="arlo-placeholder-details"></div>
+              <div class="arlo-placeholder-offer"></div>
+              <div class="arlo-placeholder-buttons">
+                <div class="arlo-placeholder-button-left"></div>
+                <div class="arlo-placeholder-button-right"></div>
+              </div>
+            </div>
+            <div class="arlo-placeholder-event">
+              <div class="arlo-placeholder-date"></div>
+              <div class="arlo-placeholder-title"></div>
+              <div class="arlo-placeholder-details"></div>
+              <div class="arlo-placeholder-offer"></div>
+              <div class="arlo-placeholder-buttons">
+                <div class="arlo-placeholder-button-left"></div>
+                <div class="arlo-placeholder-button-right"></div>
+              </div>
+            </div>
+            <div class="arlo-placeholder-event">
+              <div class="arlo-placeholder-date"></div>
+              <div class="arlo-placeholder-title"></div>
+              <div class="arlo-placeholder-details"></div>
+              <div class="arlo-placeholder-offer"></div>
+              <div class="arlo-placeholder-buttons">
+                <div class="arlo-placeholder-button-left"></div>
+                <div class="arlo-placeholder-button-right"></div>
+              </div>
+            </div>
+            <div class="arlo-placeholder-event">
+              <div class="arlo-placeholder-date"></div>
+              <div class="arlo-placeholder-title"></div>
+              <div class="arlo-placeholder-details"></div>
+              <div class="arlo-placeholder-offer"></div>
+              <div class="arlo-placeholder-buttons">
+                <div class="arlo-placeholder-button-left"></div>
+                <div class="arlo-placeholder-button-right"></div>
+              </div>
+            </div>
+            <div class="arlo-placeholder-event">
+              <div class="arlo-placeholder-date"></div>
+              <div class="arlo-placeholder-title"></div>
+              <div class="arlo-placeholder-details"></div>
+              <div class="arlo-placeholder-offer"></div>
+              <div class="arlo-placeholder-buttons">
+                <div class="arlo-placeholder-button-left"></div>
+                <div class="arlo-placeholder-button-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Templates -->
+      <script type="text/template" id="filter-template">
+        <div class="arlo-filters arlo-font-primary">
+                      <div class="arlo-other-filters arlo-clearfix arlo-font-primary">
+                          <%= showFilter({filterCode: "templatecategory"}) %>
+                          <%= showFilter({filterCode: "months"}) %>
+                          <%= showFilter({filterCode: "onlineorvenue", displayStyle: "ul"}) %>
+                          <%= showFilter({filterCode: "search", placeholderText: "Search"}) %>
+                      </div>
+      
+                      <div class="arlo-category-selectors arlo-clearfix">
+                          <%= showFilter({filterCode: "locname", displayStyle: "ul"}) %>
+      
+                          <div class="arlo-filter-tags">
+                              <%= showFilter({filterCode: "templatetag", displayStyle: "ul", showCount: false, callbacks: {onBeforeRender: "updateTemplateTagNames"}}) %>
+                          </div>
+      
+                          <%= showTimezoneSelector() %>
+                      </div>
+                  </div>
+              </script>
+      
+      <script type="text/template" id="event-template-template">
+        <%= ContentFields %>
+                  <div class="templateId" data-templateid="<%= TemplateID %>"></div>
+              </script>
+      
+      <script type="text/template" id="upcoming-events-template">
+        <div class="arlo-listitem arlo-clearfix">
+                          <div class="arlo-date arlo-font-special">
+                              <div class="arlo-date-container arlo-text-color-dark">
+                                  <div class="arlo-start-month arlo-bg-color-primary">
+                                      <%= SmartDateFields.startMonth %>
+                                  </div>
+                                  <div class="arlo-start-date arlo-text-color-lightest">
+                                      <%= SmartDateFields.startDay %>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="arlo-event-content">
+                          <div class="arlo-title arlo-font-special">
+                              <div class="arlo-name arlo-text-color-dark arlo-h2">
+                                  <a href="<%= ViewUri %>"><%- Name %></a>
+                              </div>
+      
+                              <% if (typeof(Provider.Name) !== "undefined" && Provider.Name !== "") { %>
+                                  <% if (typeof(Provider.WebsiteUri) !== "undefined" && Provider.WebsiteUri !== "") { %>
+                                      <div class="arlo-text-color-lightest arlo-provider-info">
+                                          Provided By
+                                          <a class="arlo-provider-name arlo-text-color-link" href="<%- Provider.WebsiteUri %>">
+                                              <%- Provider.Name %>
+                                          </a>
+                                      </div>
+                                  <% } else { %>
+                                      <div class="arlo-text-color-lightest arlo-provider-info">Provided By <span class="arlo-provider-name arlo-text-color-normal"><%- Provider.Name %></span></div>
+                                  <% } %>
+                              <% } %>
+                          </div>
+      
+                          <div class="arlo-detail arlo-font-primary">
+                              <% if (typeof(Location.IsOnline) !== "undefined" && Location.IsOnline === true && (typeof(Location.Name) !== "undefined" && Location.Name !== "")) { %>
+                                  <span class="arlo-text-color-lightest"><i class="fa fa-desktop"></i></span>
+                                  <span class="arlo-online arlo-text-color-normal arlo-font-size-larger"><%- Location.Name %></span>
+                              <% } else { %>
+                                  <span class="arlo-text-color-lightest"><i class="fa fa-map-marker"></i></span>
+                              <% if (typeof(Location.ViewUri) !== "undefined" && Location.ViewUri !== "") { %>
+                                  <a href="<%- Location.ViewUri %>" class="arlo-location arlo-text-color-link arlo-font-size-larger">
+                                      <%- Location.Name %>
+                                  </a>
+                                  <% } else { %>
+                                      <span class="arlo-location arlo-text-color-normal arlo-font-size-larger"><%- Location.Name %></span>
+                                  <% } %>
+                              <% } %>
+      
+                              <span class="arlo-duration arlo-text-color-lightest">
+                                  <i class="fa fa-clock-o"></i>
+                                  <span class="arlo-text-color-normal arlo-font-size-larger"><%- DurationDescription %></span>
+                                  <% if (typeof(Location.IsOnline) !== "undefined" && Location.IsOnline === true) { %>
+                                      <span class="arlo-text-color-normal arlo-font-size-larger"><%- TimeZone %></span>
+                                  <% } %>
+                              </span>
+      
+                              <% if (typeof(Notice) !== "undefined" && Notice !== "") { %>
+                                  <span class="arlo-notice arlo-text-color-lightest"><span class="arlo-text-color-primary arlo-font-size-larger"><i><%- Notice %></i></span></span>
+                              <% } %>
+      
+                              <% if (Sessions.length > 1) { %>
+                                  <span class="arlo-sessions">
+                                      <span class="arlo-duration arlo-text-color-lightest">
+                                          <i class="fa fa-clock-o"></i>
+                                          <span class="arlo-session-info arlo-text-color-link arlo-font-size-larger" data-toggle="tooltip" data-placement="bottom" data-html="true" title="" style="display: inline;" data-original-title="">
+                                              Show sessions
+                                          </span>
+                                          <div class="tooltipcontent">
+                                              <h4>Session details</h4>
+                                              <%= formatSessionsInformation({ fieldsToDisplay: ['Name', 'Day', 'Date', 'TimeSpan'] }) %>
+                                          </div>
+                                      </span>
+                                  </span>
+                              <% } %>
+      
+                              <div class="arlo-summary arlo-text-color-light">
+                                  <%- Summary %>
+                              </div>
+      
+                              <div class="arlo-offers">
+                                  <%= formatAdvertisedOffers() %>
+                              </div>
+                              <div class="register-content">
+                                  <%= formatRegistrationInfo('link') %>
+                              </div>
+                              <span class="arlo-more-info-button">
+                                  <a href="<%= ViewUri %>" class="arlo-bg-color-primary">More Information</a>
+                              </span>
+      
+                              <% if (PlacesRemaining !== "") { %>
+                                  <span class="arlo-places-remaining arlo-text-color-primary arlo-font-size-larger"><%= PlacesRemaining %> Places Remaining</span>
+                              <% } %>
+      
+                              <% if (EventFullMessage !== "") { %>
+                                  <span class="arlo-places-remaining arlo-text-color-primary arlo-font-size-larger"><%= EventFullMessage %></span>
+                              <% } %>
+                          </div>
+                      </div>
+      
+                  </div>
+              </script>
+      
+      <!-- Dependencies -->
+      <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+      <script type="text/javascript" src="//connect.arlocdn.net/jscontrols/1.1/init.js" charset="utf-8" defer="defer"></script>
+      <script src="script.js" async defer></script>
+
+    <script src="./calender.js"></script>
+  </body>
+</html>
