@@ -1,0 +1,366 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *::after, *::before {
+    box-sizing: inherit;
+  }
+  /* spinner */
+  .arlo .arlo-loading-overlay {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    bottom: 50%;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+  }
+  .arlo .arlo-loading-overlay:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .arlo .arlo-loading-overlay:not(:required) {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+  .arlo .arlo-loading-overlay:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  }
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .arlo {
+    font-family: 'Source Sans Pro', Arial, Tahoma, sans-serif;
+  }
+  .arlo .arlo-filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .arlo .arlo-filters .arlo-other-filters {
+    flex: 1 0 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .arlo .arlo-filters .arlo-category-selectors, .arlo .arlo-filters .arlo-other-filters {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 1100px) {
+    .arlo .arlo-filters .arlo-category-selectors, .arlo .arlo-filters .arlo-other-filters {
+      display: block;
+      text-align: left;
+    }
+  }
+  .arlo .arlo-filters .arlo-category-selectors > div, .arlo .arlo-filters .arlo-other-filters > div {
+    margin-top: 10px;
+    float: none !important;
+  }
+  .arlo .arlo-filters select, .arlo .arlo-filters input.arlo-search {
+    border-radius: 30px;
+    display: inline;
+    background-color: #e6e6e6;
+    border: none;
+    font-size: 15.4px;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  @media (max-width: 1100px) {
+    .arlo .arlo-filters select, .arlo .arlo-filters input.arlo-search {
+      width: 100%;
+    }
+  }
+  .arlo select {
+    cursor: pointer;
+    padding: 10px 70px 10px 24px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='black' d='M18.706 8.294c-0.387-0.387-1.025-0.387-1.413 0l-5.294 5.294-5.294-5.294c-0.387-0.387-1.025-0.387-1.413 0s-0.387 1.025 0 1.413l6 6c0.194 0.194 0.45 0.294 0.706 0.294s0.513-0.1 0.706-0.294l6-6c0.394-0.387 0.394-1.025 0-1.413z'></path></svg>");
+  }
+  .arlo .arlo-filters .arlo-other-filters .arlo-filter-unordered-list {
+    display: flex;
+  }
+  @media (max-width: 1100px) {
+    .arlo .arlo-filters .arlo-other-filters .arlo-filter-unordered-list {
+      display: block;
+    }
+  }
+  .arlo ul.arlo-filter-unordered-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .arlo .arlo-onlineOrVenueFilterList, .arlo .arlo-filter-unordered-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .arlo ol, .arlo ul, .arlo li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .arlo .arlo-filters .arlo-filter-unordered-list li, .arlo .arlo-filters .arlo-checkbox-filter-option input[id^='loccode'] + label {
+    margin-right: 10px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #e6e6e6;
+    color: #696464;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 1100px) {
+    .arlo .arlo-filters .arlo-filter-unordered-list li, .arlo .arlo-filters .arlo-checkbox-filter-option input[id^='loccode'] + label {
+      display: block;
+      width: 100%;
+    }
+  }
+  .arlo .arlo-filters input.arlo-search {
+    padding: 10px 20px;
+  }
+  .arlo .arlo-category-selectors > div {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li[data-code='Web_LiveOnline']:before {
+    content: '\f10a';
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li[data-code='Web_PrivateOnsite']:before {
+    content: '\f10b';
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li[data-code='Web_Public']:before {
+    content: '\f118';
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li[data-code='Web_SelfpacedOnline']:before {
+    content: '\f116';
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li {
+    line-height: 30px;
+    color: #ff1d87;
+    cursor: pointer;
+    padding: 5px 20px;
+  }
+  .arlo .arlo-filter-tags .arlo-filter-unordered-list li:before {
+    font-family: Arlo-WP;
+    font-size: 20px;
+    margin-right: 8px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+  .arlo #arlo-filter-toggle {
+    display: none;
+  }
+  @media (max-width: 1100px) {
+    .arlo #arlo-filter-toggle {
+      display: block;
+    }
+  }
+  .arlo .arlo-event-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .arlo .arlo-event-listitem {
+    max-width: 100%;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    list-style: none;
+    font-size: 14px;
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: #e6e6e6;
+  }
+  .arlo .arlo-listitem {
+    display: flex;
+    padding: 40px 0px;
+  }
+  .arlo .arlo-event-list .arlo-date {
+    flex: 0 1 5%;
+  }
+  .arlo-event-content {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .arlo .arlo-event-listitem .arlo-date .arlo-date-container {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    margin-top: 7px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  .arlo .arlo-text-color-dark, .arlo .arlo-text-color-lightest {
+    color: #696464;
+  }
+  .arlo .arlo-event-listitem .arlo-date .arlo-start-month {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 3px;
+    color: #ffffff;
+    background-color: #08cec2;
+  }
+  .arlo .arlo-event-listitem .arlo-date .arlo-start-date {
+    font-size: 32px;
+    vertical-align: top;
+    line-height: 1;
+    padding: 10px;
+  }
+  .arlo .arlo-event-listitem .arlo-title .arlo-h2 a {
+    margin: 0 0 5px 0;
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 25px;
+    line-height: 27px;
+    color: #696464;
+    text-decoration: none;
+  }
+  .arlo .arlo-detail {
+    font-style: italic;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+  .arlo .arlo-event-listitem .arlo-detail * {
+    padding: 2px 0;
+    color: #696464;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .arlo-location, .arlo .arlo-event-listitem .arlo-detail .arlo-duration, .arlo .arlo-event-listitem .arlo-detail .arlo-online {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  .arlo .arlo-event-listitem .arlo-text-color-link {
+    color: #ff1d87;
+  }
+  .arlo .arlo-summary, .arlo .arlo-offers {
+    font-style: normal;
+    padding-top: 10px;
+  }
+  .arlo .arlo-offer-container, .arlo .arlo-offer-li {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .arlo-discount-offer, .arlo .arlo-event-listitem .arlo-detail .arlo-original-price {
+    color: #ff1d87;
+    font-style: italic;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .register-content {
+    position: absolute;
+    right: 0;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .arlo-event-register {
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    background: #ff1d87;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+    background-repeat: repeat-x;
+    font-style: normal;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .arlo-more-info-button {
+    float: left;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+    background-repeat: repeat-x;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 5px;
+    background-color: #08cec2;
+  }
+  .arlo .arlo-event-listitem .arlo-detail .arlo-more-info-button a {
+    text-decoration: none;
+    color: white;
+  }
+  .arlo .arlo-show-more {
+    text-align: center;
+    width: 150px;
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+    color: #ffffff;
+    font-style: normal;
+    background-color: #08cec2;
+  }
+  .arlo .hidden {
+    display: none;
+  }
+  .arlo .arlo-filter-toggle-show, .arlo .arlo-filter-toggle-hide {
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #e6e6e6;
+    color: #696464;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .arlo .arlo-filters-container.arlo-show-filter #filters {
+    display: block;
+  }
+  @media (max-width: 1100px) {
+    .arlo .arlo-filters-container #filters {
+      display: none;
+    }
+  }
+  

@@ -145,57 +145,55 @@ function closeNav() {
  <div id="includeEvent"></div>
  <br>
  <div id="includeTeam"></div>
-
- <footer>
-  <div class="row" style="margin: auto;">
-    <div class="col">
-      <img src="https://miro.medium.com/max/1200/1*fMCdGCokXoh8CECCD7j9Og.png" class="logo" style="width:100px; height:90px; ">
-      
-    </div>
-    <div class="col">
-      <h3 style="color:white">Address 
-      </h3>
-      <p>IGDTUW</p>
-      <p>Delhi-110006</p>
-      <p>India</p>
+ <div class="footer">
+  <div class="container">
+    <div class="rowd">
+      <div class="cold">
+        <div class="footer-logo">
+          <img class="logod" src="https://miro.medium.com/max/1200/1*fMCdGCokXoh8CECCD7j9Og.png"></img>
+        </div>
       </div>
-
-    <div class="col footer_links">
-      <h3 style="color:white">Links
-      </h3>
-      <a href="#includeAbout" style="color: white;"><p>About</p></a>
-      <a href="#includeGoal" style="color: white;"><p>Goals</p></a>
-      <a href="#includeEvent" style="color: white;"><p>Events</p></a>
-      <a href="./upcoming_teams/upcoming_teams.html" style="color: white;"><p>Team</p></a>
-      <a href="./faq/faq.html" style="color: white;"><p>FAQ</p></a>
-      <a href="./contact/index.html" style="color: white;"><p>Contact Us</p></a>
-    </div>
-
-    
-    <div class="col">
-<!-- 
-      <h3 style="color:white"> Our Newsletter 
-
-
-      </h3>
-      <form>
-        <i class="far fa-envelope"></i>
-        <input type="email" Placeholder="Enter your email address" required="">
-        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-      </form> -->
-      <div class="social-icons">
-        
-       <a href="https://twitter.com/IgdtuwMsc"> <i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/msc.igdtuw/"><i class="fab fa-instagram"></i></a>
-       <a href="https://www.linkedin.com/company/microsoft-student-chapter-igdtuw/"><i class="fab fa-linkedin"></i></a>
+      <div class="cold">
+        <div class="rowd">
+          <div class="cold">
+            <div class="footer-address">
+              <h3>Address</h3>
+              <p><i class="fa fa-map-marker-alt"></i> IGDTUW New Delhi, India</p>
+            </div>
+          </div>
+          <div class="cold">
+            <div class="footer-link">
+              <h3>Links</h3>
+              <a href="#includeAbout">About</a>
+              <a href="#includeGoal">Goals</a>
+              <a href="#includeEvent">Events</a>
+              <a href="./upcoming_teams/upcoming_teams.html">Team</a>
+              <a href="./faq/faq.html">FAQ</a>
+              <a href="./contact/index.html">Contact Us</a>
+            </div>
+        </div>
+          <div class="cold">
+            <div class="footer-contact">
+              <h3>Get In Touch</h3>
+              
+              <div class="footer-social">
+                <a href="https://www.linkedin.com/company/microsoft-student-chapter-igdtuw/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/msc.igdtuw/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/IgdtuwMsc"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
-  <hr>
-  <p class="copyright">MLSA-IGDTUW © 2022 - All Rights Reserved</p>
-</footer>
-
-    <!-- social media content end -->
+<hr>
+  <div class="container copyright">
+      <div>
+        <p>&copy; MLSA-IGDTUW © 2022, All Right Reserved.</p>
+      </div>
+  </div>
+</div>
 
 
 
@@ -217,6 +215,7 @@ function closeNav() {
         $("#includeGoal").load("./goals/goals.html"); 
         $("#includeEvent").load("./events/events.html"); 
         $("#includeTeam").load("./teams/team.html"); 
+        $("#includeFooter").load("./footer/footer.html"); 
 
       });
       </script>
