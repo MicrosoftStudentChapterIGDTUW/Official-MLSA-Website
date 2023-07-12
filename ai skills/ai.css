@@ -1,0 +1,142 @@
+html,body{
+    overflow-x: hidden;
+}
+body{
+    background: linear-gradient(to right, #4696ff,#0855ba);
+}
+.banner{
+width:100vw;height:60vh;
+background-color: white;
+align-items: center;
+}
+.banner img{
+    width:75vw;
+    height: 60vh;
+    align-self: center;
+    margin-left: 12.5vw;
+}
+.buttoncontainer{
+    margin-top: 3rem;
+    width:100vw;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.regbutton{
+    width:20vw;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-left: 15rem;
+    margin-right: 2rem;
+    background-color: white;
+    color:black;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.regbutton a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:black;
+}
+.regbutton:hover{
+    background-color:#043678 ;
+    box-shadow: 0px 0px 20px black;
+    border:none;
+    color:white
+}
+.regbutton:hover a{
+color:white;
+}
+@media(max-width:1024px)
+{
+    .regbutton{
+        width:80vw;
+        padding: 1rem 1rem 1rem 1rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+        background-color: white;
+        color:black;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+    .regbutton a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color:black;
+    }
+    .banner{
+        width:100vw;height:25vh;
+        background-color: white;
+        align-items: center;
+        }
+        .banner img{
+            width:100vw;
+            height: 25vh;
+            align-self: center;
+            margin-left:1rem;
+        }
+}
+.s-media{
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;
+    transition:all linear 0.2s ;
+   }
+   .s-media a:first-child{
+       border-radius: 0 5px 0 0;
+   }
+   .s-media a:last-child{
+       border-radius: 0 0 5px 0;
+   }
+   .s-item {
+       display:flex;
+       width: 30px;
+       height: 30px;
+       color: white;
+       font-size: 20px;
+       text-decoration: none;
+   /*    line-height: 60px;*/
+       text-align: center;
+       align-items: center;
+       justify-content: center;
+   
+   /*    transition:all linear 0.2s ;*/
+   /*    overflow: auto;*/
+   }
+   .s-item:hover {
+       width:35px;
+       
+   }
+   
+   /*#sm-open {
+       position: fixed;
+       top: 100px ;
+       left: -60px;
+       border-radius:0 30px 30px 0;
+       
+       transition:all linear 0.2s ;
+   }*/
+   .facebook {background-color: #0077b5;
+    
+   }
+   .linkedin{
+     background-color: #0077b5;
+   }
+   .gplus{
+     
+   background: #f09433; 
+   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+   background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+   }
+   .twitter {background-color: #3AAFD6;}
+   /* .gplus {background-color: #F8694D; } */
+   .print {background-color: #7CB0A4;}
